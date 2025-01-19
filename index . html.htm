@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>صفحة مع رابط إنستجرام وصورة خلفية</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      height: 100vh;
+      font-family: Arial, sans-serif;
+      text-align: center;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      position: relative;
+      background-image: url('/Users/mohamedahmed/Downloads/DALL·E 2025-01-19 18.38.27 - A serene, deep landscape scene with soft, subtle lighting. The image features a misty forest clearing surrounded by tall trees, with light rays filter.webp');
+      background-size: cover;
+      background-position: center;
+      color: #fff;
+    }
+
+    h1 {
+      color: #fff;
+      z-index: 2;
+    }
+
+    .buttons-container {
+      margin-top: 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      z-index: 2;
+    }
+
+    .button {
+      display: block;
+      background-color: #00568b;
+      color: #fff;
+      border: none;
+      width: 150px;
+      height: 60px;
+      margin: 10px 0;
+      border-radius: 30px;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: background-color 0.3s, transform 0.2s;
+      opacity: 0; /* البداية */
+      transform: translateY(50px); /* بداية الحركة */
+      animation: slideIn 0.8s ease-out forwards;
+    }
+
+    .button:nth-child(1) {
+      animation-delay: 0.2s;
+    }
+
+    .button:nth-child(2) {
+      animation-delay: 0.4s;
+    }
+
+    .button:nth-child(3) {
+      animation-delay: 0.6s;
+    }
+
+    .button:nth-child(4) {
+      animation-delay: 0.8s;
+    }
+
+    .button:hover {
+      background-color: #000000;
+      transform: translateY(-5px) scale(1.05);
+    }
+
+    @keyframes slideIn {
+      from {
+        opacity: 0;
+        transform: translateY(50px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    /* استجابة للأجهزة الصغيرة */
+    @media (max-width: 768px) {
+      .button {
+        width: 120px;
+        height: 50px;
+        font-size: 0.9rem;
+      }
+    }
+
+    /* استجابة للأجهزة الصغيرة جدًا مثل الهواتف */
+    @media (max-width: 480px) {
+      .button {
+        width: 100px;
+        height: 40px;
+        font-size: 0.8rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="buttons-container">
+    <a href="https://www.instagram.com/_mo7amed_ahmeed_/profilecard/?igsh=MWYxa2RubnpmcmV6NQ==" target="_blank">
+      <button class="button">Instagram</button>
+    </a>
+    <a href="https://www.facebook.com/profile.php?id=100025374902253&mibextid=LQQJ4d" target="_blank">
+      <button class="button">Facebook</button>
+    </a>
+    <a href="https://wa.me/201121093726" target="_blank">
+      <button class="button">WhatsApp</button>
+    </a>
+    <a href="https://www.tiktok.com/@_mo7amed_ahmeed_?is_from_webapp=1&sender_device=pc" target="_blank">
+      <button class="button">tiktok</button>
+    </a>
+  </div>
+</body>
+</html>
